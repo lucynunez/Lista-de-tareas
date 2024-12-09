@@ -6,7 +6,11 @@
     --color-text: #2d2d23;
 
 }
-
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body {
     font-family: "Poppins", serif;
     font-style: italic;
@@ -16,15 +20,17 @@ body {
     color: var(--color-text);
     display: flex;
     justify-content: center;
+    overflow: auto;
 }
 .container{
     max-width: 80%;
-    width: 400px;
-    height: 600px;
+    width: 500px;
+    height: 800px;
     margin: 0 auto;
     padding: 40px;
     background-color: #a972b6;
     border-radius: 10px;
+    overflow: auto;
 }
 .encabezado{
     padding: 10px 0 5px 0;
@@ -45,6 +51,9 @@ body {
     border-radius: 8px;
     background-color: #bbaebe;
     padding-left: 10px;
+    font-size: 18px;
+    font-family: "Poppins", serif;
+    color: var(--color-text);
 }
 #input::placeholder{
     font-size: 1.1rem;
@@ -62,10 +71,17 @@ body {
 .tareas h2{
     margin-bottom: 20px;
 }
+#lista{
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
 .tareas {  
     font-size: 25px;
 }
-.tareas li{
+#lista li{
     background-color: #b58bbe;
     border-radius: 15px;
     padding: 5px;
@@ -73,12 +89,23 @@ body {
     margin: 5px 0;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
-.tareas i:hover{
-    color: #8ba6ac;
+#lista li i{
+    font-size: 1.5rem;
+    color: #460355;
+    cursor: pointer;
+}
+#lista li p{
+    flex: 4;
+    margin: 0 20px;
+    text-align: left;
+    color: #460355;
+}
+#lista i:hover{
+    color: #25afd2;
 }
 .tachado{
     text-decoration: line-through;
-    color: #8ba6ac;
+    color: #091113;
 }
